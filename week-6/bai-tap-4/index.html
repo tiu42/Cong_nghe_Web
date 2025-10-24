@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jewelry Store</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Jewelry Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#our-products">Our Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Giới thiệu -->
+        <section id="about-us">
+            <h2>About Us</h2>
+            <p>We offer a wide variety of exquisite jewelry pieces crafted with care and precision.</p>
+        </section>
+
+        <!-- Thanh tìm kiếm + nút thêm sản phẩm -->
+        <section id="controls" style="text-align:center; margin: 20px;">
+            <input type="text" id="searchInput" placeholder="Search products..." style="padding:8px; width:200px;">
+            <button id="searchBtn">Search</button>
+            <button id="addProductBtn">Add Product</button>
+        </section>
+
+        <!-- Danh sách sản phẩm -->
+        <section id="our-products" class="product-list">
+            <h2>Our Products</h2>
+            <div id="product-list" class="product-grid">
+                <article class="product">
+                    <h3 class="product-name">Diamond Necklace</h3>
+                    <p class="product-desc">Elegant diamond necklace perfect for special occasions.</p>
+                    <p class="product-price">Price: $2,000</p>
+                </article>
+                <article class="product">
+                    <h3 class="product-name">Gold Ring</h3>
+                    <p class="product-desc">Beautifully designed gold ring with intricate details.</p>
+                    <p class="product-price">Price: $800</p>
+                </article>
+                <article class="product">
+                    <h3 class="product-name">Silver Bracelet</h3>
+                    <p class="product-desc">Stylish silver bracelet suitable for everyday wear.</p>
+                    <p class="product-price">Price: $150</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Form thêm sản phẩm (ẩn mặc định) -->
+        <form id="addProductForm" class="hidden">
+            <h3>Add a New Product</h3>
+
+            <label for="newName">Product Name:</label>
+            <input type="text" id="newName" required>
+
+            <label for="newPrice">Price ($):</label>
+            <input type="number" id="newPrice" required>
+
+            <label for="newDesc">Description:</label>
+            <textarea id="newDesc" rows="3"></textarea>
+
+            <p id="errorMsg" style="color:red;"></p>
+
+            <div class="form-buttons">
+                <button type="submit">Add</button>
+                <button type="button" id="cancelBtn">Cancel</button>
+            </div>
+        </form>
+    </main>
+
+    <footer id="contact">
+        <form method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+        <p>&copy; 2024 Jewelry Store. All rights reserved.</p>
+    </footer>
+
+    <!-- Liên kết JS -->
+    <script src="script.js"></script>
+</body>
+</html>

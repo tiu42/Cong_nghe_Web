@@ -18,10 +18,20 @@
         </nav>
     </header>
     <main>
+        <!-- Giới thiệu -->
         <section>
             <h2>About Us</h2>
             <p>We offer a wide variety of exquisite jewelry pieces crafted with care and precision.</p>
         </section>
+
+        <!-- Thanh tìm kiếm + nút thêm sản phẩm -->
+        <section id="controls" style="text-align:center; margin: 20px;">
+            <input type="text" id="searchInput" placeholder="Search products..." style="padding:8px; width:200px;">
+            <button id="searchBtn">Search</button>
+            <button id="addProductBtn">Add Product</button>
+        </section>
+
+        <!-- Danh sách sản phẩm -->
         <section class="product-list">
             <h2>Our Products</h2>
             <div class="product-grid">
@@ -42,6 +52,27 @@
                 </article>
             </div>
         </section>
+
+        <!-- Form thêm sản phẩm (ẩn mặc định) -->
+        <form id="addProductForm" class="hidden">
+            <h3>Add a New Product</h3>
+
+            <label for="newName">Product Name:</label>
+            <input type="text" id="newName" required>
+
+            <label for="newPrice">Price ($):</label>
+            <input type="number" id="newPrice" required>
+
+            <label for="newDesc">Description:</label>
+            <textarea id="newDesc" rows="3"></textarea>
+
+            <p id="errorMsg" style="color:red;"></p>
+
+            <div class="form-buttons">
+                <button type="submit">Add</button>
+                <button type="button" id="cancelBtn">Cancel</button>
+            </div>
+        </form>
     </main>
     <footer>
         <h1>Contact us!</h1>
@@ -59,5 +90,7 @@
         </form>
         <p>&copy; 2024 Jewelry Store. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
